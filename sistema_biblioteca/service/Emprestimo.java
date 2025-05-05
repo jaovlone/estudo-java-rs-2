@@ -10,28 +10,27 @@ import java.util.Scanner;
 public class Emprestimo {
     private List<Emprestimo> emprestimos = new ArrayList<>();
 
-    public void RealizarEmprestimoDeLivro (boolean disponibilidade){
+    public void RealizarEmprestimoDeLivro(boolean disponibilidade) {
         System.out.println("/n Qual livro deseja pegar ?");
         Scanner scanner = new Scanner(System.in);
         String livroEscolhido = scanner.nextLine();
         //associar data de atualização com a data de emprestimo do livro e salvar no registro do livro
-            if (disponibilidade){
-                System.out.println("/n O" +livroEscolhido+ "foi emprestado com sucesso");
-             }
-            else{
-                System.out.println("/n Livro indisponivel no momento");
-            }
+        if (disponibilidade) {
+            System.out.println("/n O" + livroEscolhido + "foi emprestado com sucesso");
+        } else {
+            System.out.println("/n Livro indisponivel no momento");
+        }
     }
-    public void DevolucaoDoLivro (boolean disponibilidade){
+
+    public void DevolucaoDoLivro(boolean disponibilidade) {
         System.out.println("/n Qual livro deseja devolver?");
-        Scanner scanner =  new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         String livroDevolvido = scanner.nextLine();
         //associar data de atualização com a data de devolução do livro e salvar no registro do livro
-        if(disponibilidade = false){
+        if (disponibilidade = false) {
             System.out.println("/n 0" + livroDevolvido + "foi devolvido com sucesso");
-        }
-        else{
-            System.out.println("/n O" +livroDevolvido+ "não foi emprestado, ele ainda está disponivel para empréstimo");
+        } else {
+            System.out.println("/n O" + livroDevolvido + "não foi emprestado, ele ainda está disponivel para empréstimo");
         }
     }
 
